@@ -1,4 +1,12 @@
+---
+import BootyWorkout from "./plans/BootyWorkout.astro";
+import BussyMom from "./plans/BussyMom.astro";
+import MujerFuerte from "./plans/MujerFuerte.astro";
+import OneToOne from "./plans/OneToOne.astro";
+---
+
 <section class="s-crossfit">
+    <!--     <button onclick="{`window.${id}.showModal()`}">open</button> -->
     <div class="container">
         <img
             src="assets/img/placeholder-all.png"
@@ -18,33 +26,82 @@
             alt="img"
             class="crossfit-icon-3 rx-lazy"
         />
-        <h2 class="title-decor">Asesorias <span>Crossfit</span></h2>
+        <h2 class="title-decor">Asesorias</h2>
         <p class="slogan">
             Maecenas consequat ex id lobortis venenatis. Mauris id erat enim.
             Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.
         </p>
         <div class="row">
-            <div class="col-md-4 crossfit-col">
+            <div class="col-md-3 crossfit-col">
                 <div class="crossfit-item">
                     <img
+                        width="62px"
+                        height="62px"
                         class="rx-lazy"
-                        src="assets/img/placeholder-all.png"
-                        data-src="assets/img/serv-1.svg"
+                        src="assets/img/mentory/1.png"
+                        data-src="assets/img/mentory/1.png"
                         alt="img"
                     />
-                    <h3>Basic</h3>
+                    <h3>Busy mom</h3>
                     <p>
-                        ⚡️Rutina de entrenamiento (incluye una correcta
-                        periodización, ajuste del volumen de entrenamiento,
-                        indicadores de intensidad (RIR)).<br /> ⚡️Resolución a dudas
-                        por whatsapp (incluye chequeos constantes de técnica de ejercicios,
-                        monitoreo del estado físico y ajustes/modificaciones al plan).
-                        *No incluye apartado nutricional. *Si incluye App móvil
-                    </p>
-                    <a class="btn" href="program.html">view Schedule</a>
+                        Este es el plan ideal para todas las Mamás que aman
+                        entrenar o cuidar de sí mismas, que buscan estar en
+                        forma o seguir mejorando, que tienen poco tiempo y
+                        cumplen con la gran labor de ser mamá.
+                        <br />
+                    </p><span class="py-6"></span>
+                    <BussyMom id="modal2" />
                 </div>
             </div>
-            <div class="col-md-4 crossfit-col">
+            <div class="col-md-3 crossfit-col">
+                <div class="crossfit-item">
+                    <img
+                        width="62px"
+                        height="62px"
+                        class="rx-lazy"
+                        src="assets/img/mentory/2.1.png"
+                        data-src="assets/img/mentory/2.png"
+                        alt="img"
+                    />
+                    <h3>Booty Workout</h3>
+                    <p>
+                        Este es el plan ideal para todas las mujeres que buscan
+                        estar fuertes pero quieren llevar sus glúteos a otro
+                        nivel, no importa si sos principiante o avanzada
+                        encontraras el plan perfecto y adaptado para vos!<br />
+                        <br />
+                    </p>
+
+                    <BootyWorkout key="sadss" />
+                </div>
+            </div>
+            <div class="col-md-3 crossfit-col">
+                <div class="crossfit-item">
+                    <!--   <div class="price-cover">
+                        <div class="price">40</div>
+                        <div class="date"><span>99</span>3 months</div>
+                    </div> -->
+
+                    <img
+                        width="65px"
+                        height="65px"
+                        class="rx-lazy"
+                        src="assets/img/mentory/3.png"
+                        data-src="assets/img/mentory/3.1.png"
+                        alt="img"
+                    />
+                    <h3>Mujer Fuerte</h3>
+                    <p>
+                        Este es el plan ideal para aquellas que busquen perder
+                        grasa o ganar masa muscular, generar hábitos, mindset
+                        entre otras cosas, Pero sobre todo estar fuertes
+                    </p>
+                    <span class="py-8"></span>
+
+                    <MujerFuerte />
+                </div>
+            </div>
+            <!--   <div class="col-md-3 crossfit-col">
                 <div class="crossfit-item">
                     <img
                         class="rx-lazy"
@@ -60,22 +117,26 @@
                     </p>
                     <a class="btn" href="program.html">view Schedule</a>
                 </div>
-            </div>
-            <div class="col-md-4 crossfit-col">
+            </div> -->
+            <div class="col-md-3 crossfit-col">
                 <div class="crossfit-item">
                     <img
+                        width="65px"
+                        height="65px"
                         class="rx-lazy"
-                        src="assets/img/placeholder-all.png"
-                        data-src="assets/img/serv-3.svg"
+                        src="assets/img/mentory/4.png"
+                        data-src="assets/img/mentory/4.png"
                         alt="img"
                     />
-                    <h3>boxing</h3>
+                    <h3>Asesoramiento 1 a 1</h3>
                     <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam.
+                        Este asesoramiento, es para mujeres que buscan lograr un
+                        cambio de 360 grados en sus vidas, con un compromiso del
+                        mil por ciento, en el que no solo harán cambio físico
+                        sino mental y de hábitos, No es para cualquiera y tiene
+                        una duración de 3 meses!
                     </p>
-                    <a class="btn" href="program.html">view Schedule</a>
+                    <OneToOne />
                 </div>
             </div>
         </div>

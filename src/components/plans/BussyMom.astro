@@ -1,0 +1,35 @@
+---
+import Dialog from "./Dialog.astro";
+
+const { id, buttonText, modalTitle, modalText } = Astro.props;
+---
+
+<button class="btn open-button2">Información</button>
+<dialog class="modal2 bg-custom" id="modal2">
+    <Dialog
+        titleWhite={"Bussy"}
+        src="assets/img/mentory/1.png"
+        titleRed={"Moms"}
+        subTitle={"Que obtengo con el plan Bussy Mom?"}
+        closeButtonClass={"close-button2"}
+        text={`Vas a tener una rutina personalizada según tus prioridades/rutina/tiempo en casa o en el gym, con soporte por Ignacio y plan alimenticio,según tu objetivo con muchas opciones y cosas sencillas para tu rutina diaria.`}
+    />
+</dialog>
+<script>
+    const modal = document.querySelector(".modal2") as any;
+    const openModal = document.querySelector(".open-button2");
+    const closeModal = document.querySelector(".close-button2");
+
+    openModal.addEventListener("click", () => {
+        modal.showModal();
+    });
+
+    closeModal.addEventListener("click", () => {
+        modal.close();
+    });
+    document.addEventListener("click", (event: Event) => {
+        if (event.target == modal) {
+            modal.close();
+        }
+    });
+</script>

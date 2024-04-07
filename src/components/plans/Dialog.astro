@@ -1,0 +1,28 @@
+---
+const { titleWhite, titleRed, text, subTitle, closeButtonClass, src } =
+    Astro.props;
+---
+
+<div class="p-10">
+    <span class="flex flex-row justify-center pb-2">
+        <img
+            width="62px"
+            height="62px"
+            class="rx-lazy align-middle"
+            src={src}
+            data-src={src}
+            alt="img"
+        />
+    </span>
+    <h2 class="title-decor text-cyan-50">
+        {titleWhite}<span> {titleRed}</span>
+    </h2>
+    <h1 class="text-cyan-50" style="font-size: 22px;">
+        {subTitle}
+    </h1>
+    <p style="font-size: 18px; font-weight: normal ;" class="max-w-lg">
+        {text}
+    </p>
+
+    <button class=`${closeButtonClass} text-cyan-50`>Cerrar</button>
+</div>

@@ -1,0 +1,35 @@
+---
+import Dialog from "./Dialog.astro";
+
+const { id, buttonText, modalTitle, modalText } = Astro.props;
+---
+
+<button class="btn open-button4">Información</button>
+<dialog class="modal4 bg-custom" id="modal4">
+    <Dialog
+        titleWhite={"Asesoramiento"}
+        src="assets/img/mentory/4.png"
+        titleRed={" 1 a 1"}
+        subTitle={"Que obtengo en el asesoramiento?"}
+        closeButtonClass={"close-button4"}
+        text={`Obtendrás tu rutina personalizada de acorde a tus objetivos y nivel, tu plan de nutrición, con tus macronutrientes y calorías, tendrás videollamadas quincenales conmigo en la cual hablaremos de tu semana, de tus dudas y  lo que sea necesario, tendrás clases semanales sobre mindset, hábitos, nutrición, entrenamiento, guías exclusivas y mucho más! Tiene una duración de 3 meses/ 90 días en la cual necesitarás estar al mil porciento. Completa el formulario haciendo click en el siguiente enlace (enlace)  y agenda tu llamada conmigo para contarte más!`}
+    />
+</dialog>
+<script>
+    const modal4 = document.querySelector(".modal4") as any;
+    const openModal1 = document.querySelector(".open-button4");
+    const closeModal1 = document.querySelector(".close-button4");
+
+    openModal1.addEventListener("click", () => {
+        modal4.showModal();
+    });
+
+    closeModal1.addEventListener("click", () => {
+        modal4.close();
+    });
+    document.addEventListener("click", (event: Event) => {
+        if (event.target == modal4) {
+            modal4.close();
+        }
+    });
+</script>

@@ -1,0 +1,35 @@
+---
+import Dialog from "./Dialog.astro";
+
+const { id, buttonText, modalTitle, modalText } = Astro.props;
+---
+
+<button class="btn open-button1">Información</button>
+<dialog class="modal1 bg-custom" id="modal1">
+    <Dialog
+        src="assets/img/mentory/2.png"
+        titleWhite="Booty"
+        titleRed="Workout"
+        subTitle="Que obtengo con el plan Booty Workout? "
+        closeButtonClass="close-button1"
+        text=`Vas a tener una rutina personalizada,para hacer en tu gym favorito, según tu nivel de entrenamiento/tiempo/prioridades enfocada mayormente en el desarrollo del glúteo y con soporte por Ignacio.`
+    />
+</dialog>
+<script>
+    const modal1 = document.querySelector(".modal1") as any;
+    const openModal1 = document.querySelector(".open-button1");
+    const closeModal1 = document.querySelector(".close-button1");
+
+    openModal1.addEventListener("click", () => {
+        modal1.showModal();
+    });
+
+    closeModal1.addEventListener("click", () => {
+        modal1.close();
+    });
+    document.addEventListener("click", (event: Event) => {
+        if (event.target == modal1) {
+            modal1.close();
+        }
+    });
+</script>

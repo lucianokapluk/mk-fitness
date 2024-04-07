@@ -2,6 +2,7 @@
 import { app } from "../firebase/server";
 import { getAuth } from "firebase-admin/auth";
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 
 /* Verificar si el usuario está autenticado */
 const auth = getAuth(app);
@@ -15,7 +16,65 @@ if (Astro.cookies.has("session")) {
 ---
 
 <Layout title="Iniciar sesión">
-    <h1>Iniciar sesión</h1>
+    <span class="my-16">s</span>
+    <section
+        class="s-testimonials flex flex-row justify-center"
+        style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.1), rgba(0, 0, 0, 0.95)), url(assets/img/hero3.jpg);   "
+    >
+        <div class="bg-black/70 p-10 lg:w-1/2 rounded-2xl">
+            <h2 class="title-decor">Iniciar <span>Sesion</span></h2>
+            <!--  <p class="slogan">
+                Maecenas consequat ex id lobortis venenatis. Mauris id erat
+                enim. Morbi dolor dolor, auctor tincidunt lorem ut, venenatis
+                dapibus miq.
+            </p> -->
+            <div class="flex flex-row justify-center">
+                <form
+                    id="contactform"
+                    action="assets/php/contact.php"
+                    name="contactform"
+                    class="items-center lg:w-9/12"
+                >
+                    <ul class="form-cover">
+                        <li class="inp-emai">
+                            <label>Correo Electronico </label>
+                            <input type="email" name="email" id="email" />
+                        </li>
+                        <li class="inp-text">
+                            <label>Contraseña </label>
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                            />
+                        </li>
+                        <!-- 	<li class="inp-text">
+								<label>Message * (required)</label>
+								<textarea id="comments" name="your-text"></textarea>
+							</li> -->
+                    </ul>
+                    <span class="p-10">
+                        <p>
+                            ¿Eres nuevo aquí? <a href="/register"
+                                >Crear una cuenta</a
+                            >
+                        </p>
+                    </span>
+                    <div class="flex flex-row justify-center">
+                        <div class="btn-form-cover">
+                            <button id="#submit" type="submit" class="btn"
+                                >Iniciar sesion</button
+                            >
+                        </div>
+                    </div>
+                </form>
+                <div id="message"></div>
+                <button id="google">Iniciar sesión con Google</button>
+            </div>
+        </div>
+    </section>
+
+    <!--     <h1>Iniciar sesión</h1>
     <p>¿Eres nuevo aquí? <a href="/register">Crear una cuenta</a></p>
     <form action="/api/auth/signin" method="post">
         <label for="email" for="email">Email</label>
@@ -24,7 +83,7 @@ if (Astro.cookies.has("session")) {
         <input type="password" name="password" id="password" />
         <button type="submit">Iniciar sesión</button>
     </form>
-    <button id="google">Iniciar sesión con Google</button>
+   -->
 </Layout>
 <script>
     import {

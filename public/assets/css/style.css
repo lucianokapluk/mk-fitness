@@ -679,6 +679,35 @@ header:after {
   }
 }
 
+.nav-btn2 {
+  display: block;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  padding: 10px 15px;
+  display: block;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.nav-btn2 span {
+  background-color: #fff;
+  height: 2px;
+  width: 100%;
+  display: block;
+  margin: 6px 0;
+  position: relative;
+  transition: all 0.4s ease, visibility 0.1s ease;
+}
+
+@media (min-width: 1035px) {
+  .nav-btn2 {
+    display: none;
+  }
+}
+
 .nav-btn {
   display: block;
   height: 50px;
@@ -702,7 +731,7 @@ header:after {
   transition: all 0.4s ease, visibility 0.1s ease;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1035px) {
   .nav-btn {
     display: none;
   }
@@ -2735,6 +2764,10 @@ blockquote:before {
   padding-top: 0;
 }
 
+.crossfit-col:nth-child(3) {
+  padding-top: 0;
+}
+
 .crossfit-item {
   text-align: center;
   padding: 50px 40px;
@@ -3018,7 +3051,7 @@ blockquote:before {
   margin-top: 0;
 }
 
-.club-card-item .price-cover {
+.price-cover {
   display: flex;
   justify-content: flex-start;
   font-family: "Righteous", sans-serif;
@@ -3027,7 +3060,7 @@ blockquote:before {
   padding-bottom: 22px;
 }
 
-.club-card-item .price-cover:before {
+.price-cover:before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -3038,18 +3071,18 @@ blockquote:before {
   background-color: #f23849;
 }
 
-.club-card-item .price-cover .price {
+.price-cover .price {
   font-size: 72px;
   padding-right: 6px;
   line-height: .75;
 }
 
-.club-card-item .price-cover .date {
+.price-cover .date {
   font-size: 18px;
   padding-left: 2px;
 }
 
-.club-card-item .price-cover .date span {
+.price-cover .date span {
   margin-left: -2px;
   color: #fcbd56;
   display: block;

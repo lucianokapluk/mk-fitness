@@ -1,82 +1,16 @@
-<header class="header">
+<header class="header lg:flex lg:justify-between lg:items-center py-4">
+    <a href="index.html" class="logo lg:my-0 lg:ml-4">
+        <img src="assets/img/mklogo.png" alt="logo" height="60" width="60" />
+    </a>
+
     <a href="#" class="nav-btn">
         <span></span>
         <span></span>
         <span></span>
     </a>
-    <div class="top-panel">
+
+    <div class="header-menu mt-6">
         <div class="container">
-            <div class="header-left">
-                <ul class="header-cont">
-                    <li>
-                        <i class="fa fa-phone" aria-hidden="true"></i><a
-                            href="tel:18004886040">1-800-488-6040</a
-                        >
-                    </li>
-                    <li>
-                        <i class="fa fa-clock-o" aria-hidden="true"></i>Mon -
-                        Fri: 8:00AM - 7:00PM | Sat - Sun: Closed
-                    </li>
-                </ul>
-            </div>
-            <div class="header-right">
-                <form class="search-form">
-                    <input
-                        type="search"
-                        class="search-form__field"
-                        placeholder="Search"
-                        value=""
-                        name="s"
-                    />
-                    <button type="submit" class="search-form__submit"
-                        ><i class="fa fa-search" aria-hidden="true"></i></button
-                    >
-                </form>
-                <ul class="social-list">
-                    <li>
-                        <a
-                            target="_blank"
-                            href="https://www.facebook.com/rovadex"
-                            ><i class="fa fa-facebook" aria-hidden="true"
-                            ></i></a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            target="_blank"
-                            href="https://twitter.com/RovadexStudio"
-                            ><i class="fa fa-twitter" aria-hidden="true"></i></a
-                        >
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.youtube.com"
-                            ><i class="fa fa-youtube" aria-hidden="true"></i></a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            target="_blank"
-                            href="https://www.instagram.com/rovadex"
-                            ><i class="fa fa-instagram" aria-hidden="true"
-                            ></i></a
-                        >
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="header-menu">
-        <div class="container">
-            <div class="header-logo">
-                <a href="index.html" class="logo"
-                    ><img
-                        src="assets/img/mklogo.png"
-                        alt="logo"
-                        height="100"
-                        width="100"
-                    /></a
-                >
-            </div>
             <nav class="nav-menu">
                 <ul class="nav-list">
                     <li class="dropdown">
@@ -108,4 +42,14 @@
             </nav>
         </div>
     </div>
+    <form action="/api/auth/signout">
+        <div class="login-btn-container hidden lg:block mr-6">
+            <button
+                type="submit"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+                Login
+            </button>
+        </div>
+    </form>
 </header>
