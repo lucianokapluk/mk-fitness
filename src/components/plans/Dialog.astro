@@ -1,9 +1,15 @@
 ---
+import CloseIcon from "../icons/CloseIcon.astro";
+
 const { titleWhite, titleRed, text, subTitle, closeButtonClass, src } =
     Astro.props;
 ---
 
 <div class="p-10">
+    <span class="float-right">
+        <button class=`${closeButtonClass} text-cyan-50`><CloseIcon /></button>
+    </span>
+
     <span class="flex flex-row justify-center pb-2">
         <img
             width="62px"
@@ -24,5 +30,7 @@ const { titleWhite, titleRed, text, subTitle, closeButtonClass, src } =
         {text}
     </p>
 
-    <button class=`${closeButtonClass} text-cyan-50`>Cerrar</button>
+    <button class=`btn ${titleWhite}`>
+        <span>Lo Quiero! </span>
+    </button>
 </div>

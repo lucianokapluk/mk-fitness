@@ -23,11 +23,7 @@ if (Astro.cookies.has("session")) {
     >
         <div class="bg-black/70 p-10 lg:w-1/2 rounded-2xl">
             <h2 class="title-decor">Iniciar <span>Sesion</span></h2>
-            <!--  <p class="slogan">
-                Maecenas consequat ex id lobortis venenatis. Mauris id erat
-                enim. Morbi dolor dolor, auctor tincidunt lorem ut, venenatis
-                dapibus miq.
-            </p> -->
+
             <div class="flex flex-row justify-center">
                 <form
                     id="contactform"

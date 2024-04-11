@@ -32,4 +32,10 @@ const { id, buttonText, modalTitle, modalText } = Astro.props;
             modal1.close();
         }
     });
+    let wsBtn = document.querySelector(".Booty");
+    wsBtn.addEventListener("click", () => {
+        window.open(
+            "https://wa.me/+61431273526?text=Hola!%20Quiero%20la%20asesoria%20BOOTY%20WORKOUT",
+        );
+    });
 </script>
