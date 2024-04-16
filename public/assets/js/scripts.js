@@ -14,6 +14,48 @@
 		return false;
 	});
 
+	if ($(window).innerWidth() <= 767) {
+
+		$('body').on('click', '.nav-btn-menu', function (event) {
+			$(event.currentTarget).toggleClass('active');
+			$('.nav-menu').toggleClass('active');
+
+			$('body').toggleClass('no-scroll');
+			console.log($(this).width())
+			// ID al que deseas hacer scroll
+
+			var targetId = event.currentTarget.id;
+
+			// Calcula la posición del elemento objetivo
+			var targetOffset = $(targetId).offset().top;
+
+			// Animación de scroll suave
+			$('html, body').animate({
+				scrollTop: targetOffset
+			}, 100); // Tiempo de duración de la animación en milisegundos
+
+			return false;
+		});
+	} else {
+		$('body').on('click', '.nav-btn-menu', function (event) {
+
+			console.log($(this).width())
+			// ID al que deseas hacer scroll
+
+			var targetId = event.currentTarget.id;
+
+			// Calcula la posición del elemento objetivo
+			var targetOffset = $(targetId).offset().top;
+
+			// Animación de scroll suave
+			$('html, body').animate({
+				scrollTop: targetOffset
+			}, 100); // Tiempo de duración de la animación en milisegundos
+
+			return false;
+		});
+	}
+
 	$(window).on('resize.myTemplate', function () {
 		$('body')[($(this).width() <= 767) ? 'addClass' : 'removeClass']('isMobile')
 	}).trigger('resize.myTemplate');
@@ -130,6 +172,7 @@
 			slidesToScroll: 1,
 			dots: true,
 			arrows: true,
+			autoplay: true,
 			speed: 800,
 			fade: true,
 			pauseOnHover: false,

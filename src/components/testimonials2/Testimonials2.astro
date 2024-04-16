@@ -1,0 +1,29 @@
+---
+import { testimonialsList } from "../testimonials/Testimonials.astro";
+import TestimonialsCard2 from "./TestimonialsCard2.astro";
+---
+
+<!-- ============== S-TESTIMONIALS ============== -->
+<section
+    id="testimonios2"
+    class="s-testimonials"
+    style="background-image: url(assets/img/testimonials/bg-testimonials.jpg);"
+>
+    <div class="mask"></div>
+    <!--    <img
+        class="testimonials-effect"
+        src="assets/img/bg-testimonials.svg"
+        alt="effect"
+    /> -->
+
+    <div class="container">
+        <div class="testimonials-slider">
+            {
+                testimonialsList.map((item, index) => (
+                    <TestimonialsCard2 testimonial={item} />
+                ))
+            }
+        </div>
+    </div>
+</section>
+<!-- ============ S-TESTIMONIALS END ============ -->

@@ -708,59 +708,6 @@ header:after {
   }
 }
 
-.nav-btn {
-  display: block;
-  height: 50px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 60px;
-  padding: 10px 15px;
-  display: block;
-  z-index: 4;
-  overflow: hidden;
-}
-
-.nav-btn span {
-  background-color: #fff;
-  height: 2px;
-  width: 100%;
-  display: block;
-  margin: 6px 0;
-  position: relative;
-  transition: all 0.4s ease, visibility 0.1s ease;
-}
-
-@media (min-width: 1035px) {
-  .nav-btn {
-    display: none;
-  }
-}
-
-.nav-btn:hover span:nth-child(2) {
-  margin-left: -8px;
-}
-
-.nav-btn.active span {
-  height: 2px;
-  transform-origin: 0;
-}
-
-.nav-btn.active span:first-child {
-  top: -3px;
-  right: -6px;
-  transform: rotate(45deg);
-}
-
-.nav-btn.active span:last-child {
-  right: -6px;
-  top: 2px;
-  transform: rotate(-45deg);
-}
-
-.nav-btn.active span:nth-child(2) {
-  visibility: hidden;
-}
 
 .header-menu {
   padding-bottom: 24px;

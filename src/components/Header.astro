@@ -19,90 +19,101 @@
             </div>
             <nav class="nav-menu">
                 <ul class="nav-list">
-                    <li class="dropdown">
-                        <a href="#">Home <i class="fa fa-caret-down"></i></a>
-                        <ul>
-                            <li class="menu-active">
-                                <a href="index.html">Crossfit</a>
-                            </li>
-                            <li><a href="home-fitness.html">Fitness</a></li>
-                            <li>
-                                <a href="home-crossfit-lite.html"
-                                    >Crossfit Lite</a
-                                >
-                            </li>
-                        </ul>
+                    <li>
+                        <a class="nav-btn-menu" id="homeBtn" href="#home"
+                            >Inicio</a
+                        >
                     </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li class="dropdown">
-                        <a href="#">Pages <i class="fa fa-caret-down"></i></a>
-                        <ul>
-                            <li><a href="program.html">Program</a></li>
-                            <li><a href="trainer.html">Trainer</a></li>
-                        </ul>
+                    <li class="nav-btn-menu" id="#asesorias">
+                        <a> Asesorías</a>
                     </li>
-                    <li><a href="blog.html">News</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
+                    <li class="nav-btn-menu" id="#about-me">
+                        <a>Sobre Mi</a>
+                    </li>
+                    <li class="nav-btn-menu" id="#testimonios1">
+                        <a>Testimonios1</a>
+                    </li>
+                    <li class="nav-btn-menu" id="#testimonios2">
+                        <a>Testimonios2</a>
+                    </li>
+                    <li class="nav-btn-menu" id="#contacts">
+                        <a>Contacto</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </div>
 </header>
 
-<!-- 
-<header class="header lg:flex lg:justify-between lg:items-center py-4">
-    <a href="index.html" class="logo lg:my-0 lg:ml-4">
-        <img src="assets/img/mklogo.png" alt="logo" height="60" width="60" />
-    </a>
+<script is:inline>
+    const isDesktop = "@media (min-width: 768px)";
+    const isMobile = "@media (max-width: 767px)";
 
-    <a href="#" class="nav-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-    </a>
+    /*    export default {
+      isDesktop,
+      isMobile
+    }; */
+</script>
+<script>
+    let home = document.getElementById("homeBtn");
+    home.addEventListener("click", () => {
+        console.log("adsasddsasd");
+    });
+</script>
+<style>
+    .nav-btn {
+        display: block;
+        height: 50px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        padding: 10px 15px;
+        display: block;
+        z-index: 4;
+        overflow: hidden;
+    }
 
-    <div class="header-menu mt-6">
-        <div class="container">
-            <nav class="nav-menu">
-                <ul class="nav-list">
-                    <li class="dropdown">
-                        <a href="#">Home <i class="fa fa-caret-down"></i></a>
-                        <ul>
-                            <li class="menu-active">
-                                <a href="index.html">Crossfit</a>
-                            </li>
-                            <li><a href="home-fitness.html">Fitness</a></li>
-                            <li>
-                                <a href="home-crossfit-lite.html"
-                                    >Crossfit Lite</a
-                                >
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li class="dropdown">
-                        <a href="#">Pages <i class="fa fa-caret-down"></i></a>
-                        <ul>
-                            <li><a href="program.html">Program</a></li>
-                            <li><a href="trainer.html">Trainer</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="blog.html">News</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-      <form action="/api/auth/signout">
-        <div class="login-btn-container hidden lg:block mr-6">
-            <button
-                type="submit"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-                Login
-            </button>
-        </div>
-    </form> 
-</header>-->
+    .nav-btn span {
+        background-color: #fff;
+        height: 2px;
+        width: 100%;
+        display: block;
+        margin: 6px 0;
+        position: relative;
+        transition:
+            all 0.4s ease,
+            visibility 0.1s ease;
+    }
+
+    @media (min-width: 1035px) {
+        .nav-btn {
+            display: none;
+        }
+    }
+
+    .nav-btn:hover span:nth-child(2) {
+        margin-left: -8px;
+    }
+
+    .nav-btn.active span {
+        height: 2px;
+        transform-origin: 0;
+    }
+
+    .nav-btn.active span:first-child {
+        top: -3px;
+        right: -6px;
+        transform: rotate(45deg);
+    }
+
+    .nav-btn.active span:last-child {
+        right: -6px;
+        top: 2px;
+        transform: rotate(-45deg);
+    }
+
+    .nav-btn.active span:nth-child(2) {
+        visibility: hidden;
+    }
+</style>

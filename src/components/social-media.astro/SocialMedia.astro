@@ -1,0 +1,32 @@
+---
+import SocialMediaItem from "./SocialMediaItem.astro";
+import Tiktok from "./Tiktok.astro";
+---
+
+<section
+    id="contacts"
+    class="s-trainer-awards"
+    style="background-image: url(assets/img/social-media/social-media-bg.jpeg);"
+>
+    <div class="mt-10"></div>
+    <div class="mask"></div>
+    <img
+        class="trainer-awards-effect"
+        src="assets/img/bg-competitions.svg"
+        alt="effect"
+    />
+
+    <div class="container">
+        <h2 class="title-decor">Contacto</h2>
+        <p class="slogan">Seguinos y Contactanos en nuestras redes!</p>
+        <div class="pt-10"></div>
+        <div class="row">
+            <SocialMediaItem socialmedia="Instagram" icon="fa-instagram" />
+            <SocialMediaItem socialmedia="YouTube" icon="fa-youtube" />
+            <!--  <SocialMediaItem socialmedia="Facebook" icon="fa-facebook" /> -->
+            <Tiktok />
+            <SocialMediaItem socialmedia="WhatsApp" icon="fa-whatsapp" />
+        </div>
+    </div>
+    <div class="mt-10"></div>
+</section>

@@ -1,0 +1,17 @@
+---
+import type { Testimonial } from "../testimonials/Testimonials.astro";
+
+interface Props {
+    testimonial: Testimonial;
+}
+
+let { testimonial } = Astro.props;
+---
+
+<div class="testimonial-slide">
+    <p>
+        “ {testimonial.text} ”
+    </p>
+    <img src={testimonial.photo} alt="img" />
+    <h3 class="name">{testimonial.name}</h3>
+</div>

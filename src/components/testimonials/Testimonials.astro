@@ -1,0 +1,54 @@
+---
+import TestimonialsCard from "./TestimonialsCard.astro";
+export interface Testimonial {
+	photo: string;
+	text: string;
+	name: string;
+}
+
+export let testimonialsList: Testimonial[] = [
+	{
+		photo: "assets/img/testimonials/izzy.jpeg",
+		text: "Con Ignacio pude cumplir mis objetivos rápidamente y no solo eso sino  que en cuestión de meses ya tenía otros nuevos objetivos  que ni yo me imaginaba poner a mi misma. Siempre agradecida.",
+		name: "Izzy Burrin",
+	},
+	{
+		photo: "assets/img/testimonials/angelica.jpeg",
+		text: "Empecé a entrenar para mejorar mi cuerpo ya que me costaba ganar peso y masa muscular , lo que quería fue ampliamente superado y no puedo estar más contenta con eso .",
+		name: "Angelica Degli Esposti",
+	},
+
+	{
+		photo: "assets/img/testimonials/carla.jpeg",
+		text: "El verano y un bikini fueron los motivos de empezar , ahora no puedo dejar más de una semana el gym que siento que algo me falta . Aprender a entrenar y a nutrirte lo cambia todo , más que contenta con Ignacio y su forma de explicarte, con paciencia y dedicación siempre ",
+		name: "Carla Sileoni ",
+	},
+	{
+		photo: "assets/img/testimonials/beatrice.jpeg",
+		text: "Mis hábitos , mi tiempo y trabajo  eran mis problemas pero tener a alguien como Ignacio que se dedicó a amoldarme todo a mi estilo de vida fue lo que me hizo elegirlo y lograr mi cambio , un gran entrenador y motivador pero sobre todo gran persona.",
+		name: "Beatrice Degli",
+	},
+];
+---
+
+<section
+	id="testimonios1"
+	class="s-testimonials"
+	style="background-image: url(assets/img/testimonials/bg-testimonials.jpg);"
+>
+	<div class="mask"></div>
+	<div class="container">
+		<h1 class="title-decor">Testimonios</h1>
+		<p class="slogan">
+			Maecenas consequat ex id lobortis venenatis. Mauris id erat enim.
+			Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.
+		</p>
+		<div class="row">
+			{
+				testimonialsList.map((item, index) => (
+					<TestimonialsCard testimonial={item} />
+				))
+			}
+		</div>
+	</div>
+</section>
