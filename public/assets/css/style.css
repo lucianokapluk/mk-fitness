@@ -5656,7 +5656,8 @@ blockquote:before {
   }
 
   .out-trainer-info {
-    padding: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .club-card-item .price-cover .price {

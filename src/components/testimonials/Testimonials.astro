@@ -32,17 +32,17 @@ export let testimonialsList: Testimonial[] = [
 ---
 
 <section
-	id="testimonios1"
 	class="s-testimonials"
 	style="background-image: url(assets/img/testimonials/bg-testimonials.jpg);"
 >
 	<div class="mask"></div>
-	<div class="container">
+	<div class="container" id="testimonios1">
 		<h1 class="title-decor">Testimonios</h1>
 		<p class="slogan">
 			Maecenas consequat ex id lobortis venenatis. Mauris id erat enim.
 			Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.
 		</p>
+
 		<div class="row">
 			{
 				testimonialsList.map((item, index) => (
