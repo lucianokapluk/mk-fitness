@@ -28,6 +28,11 @@ export let testimonialsList: Testimonial[] = [
 		text: "Mis hábitos , mi tiempo y trabajo  eran mis problemas pero tener a alguien como Ignacio que se dedicó a amoldarme todo a mi estilo de vida fue lo que me hizo elegirlo y lograr mi cambio , un gran entrenador y motivador pero sobre todo gran persona.",
 		name: "Beatrice Degli",
 	},
+	{
+		photo: "assets/img/testimonials/caro.jpeg",
+		text: "No puedo creer lo mucho que he mejorado en tan poco tiempo. Con el entrenamiento de juani y su método Mkfitness, me siento más fuerte y con más energía que nunca. ¡Gracias por ayudarme a alcanzar mis objetivos!",
+		name: "Caro Fabbroni",
+	},
 ];
 ---
 
@@ -42,7 +47,6 @@ export let testimonialsList: Testimonial[] = [
 			Maecenas consequat ex id lobortis venenatis. Mauris id erat enim.
 			Morbi dolor dolor, auctor tincidunt lorem ut, venenatis dapibus miq.
 		</p>
-
 		<div class="row">
 			{
 				testimonialsList.map((item, index) => (
@@ -50,5 +54,72 @@ export let testimonialsList: Testimonial[] = [
 				))
 			}
 		</div>
+		<!-- <div class="testimonials-slider2">
+			<div>
+				<div class="row">
+					{
+						testimonialsList.map((item, index) => (
+							<TestimonialsCard testimonial={item} />
+						))
+					}
+				</div>
+			</div>
+			<div>
+				<div class="row">
+					{
+						testimonialsList.map((item, index) => (
+							<TestimonialsCard testimonial={item} />
+						))
+					}
+				</div>
+			</div>
+		</div> -->
 	</div>
 </section>
+<style>
+	/* .testimonials-slider2 {
+		z-index: 1;
+		max-width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+ */
+	.testimonials-slider2 .slick-dots {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 30px;
+	}
+
+	.testimonials-slider2 .slick-dots li {
+		cursor: pointer;
+		position: relative;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background-color: #bebebe;
+		margin-right: 8px;
+		transition: 0.25s ease-in;
+	}
+
+	.testimonials-slider2 .slick-dots li:hover,
+	.testimonials-slider2 .slick-dots li.slick-active {
+		background-color: #f23849;
+	}
+
+	.testimonials-slider2 .slick-dots li:last-child {
+		margin-right: 0;
+	}
+
+	.testimonials-slider2 .slick-dots li button {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		visibility: hidden;
+		opacity: 0;
+		padding: 0;
+		margin: 0;
+	}
+</style>

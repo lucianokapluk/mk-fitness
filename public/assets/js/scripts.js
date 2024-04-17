@@ -250,6 +250,27 @@
 				autoplaySpeed: 500, */
 		});
 	}
+	/* -------------- TESTIMONIALS-SLIDER ------------- */
+	if ($('.testimonials-slider2')[0]) {
+		$('.testimonials-slider2').slick({
+			dots: true, infinite: true,
+			speed: 300,
+			autoplay: true,
+			arrows: false, dots: true,
+			/* 	slidesToShow: 1,
+				slidesToScroll: 2,
+				arrows: true,
+				dots: true,
+				speed: 800,
+				slidesToShow: 1,
+				fade: true,
+				infinite: true,
+	
+				cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+				autoplay: true,
+				autoplaySpeed: 500, */
+		});
+	}
 
 	/* -------------- BEST-TRAINER-SLIDER ------------- */
 	if ($('.best-trainer-slider')[0]) {
