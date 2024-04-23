@@ -6,26 +6,38 @@ import Tiktok from "./Tiktok.astro";
 <section
     id="contacts"
     class="s-trainer-awards"
-    style="background-image: url(assets/img/social-media/social-media-bg.jpeg);"
+    style="background-image: url(assets/img/social-media/bg-gym.jpeg);"
 >
     <div class="mt-10"></div>
     <div class="mask"></div>
-    <img
+    <!--   <img
         class="trainer-awards-effect"
         src="assets/img/bg-competitions.svg"
         alt="effect"
     />
-
+ -->
     <div class="container">
         <h2 class="title-decor">Contacto</h2>
         <p class="slogan">Seguinos y Contactanos en nuestras redes!</p>
         <div class="pt-10"></div>
         <div class="row">
-            <SocialMediaItem socialmedia="Instagram" icon="fa-instagram" />
-            <SocialMediaItem socialmedia="YouTube" icon="fa-youtube" />
+            <SocialMediaItem
+                socialmedia="Instagram"
+                icon="fa-instagram"
+                href="https://www.instagram.com/ignaciomarini.mk/"
+            />
+            <SocialMediaItem
+                socialmedia="YouTube"
+                icon="fa-youtube"
+                href="https://youtube.com/@ignaciomarinimk?si=ZLdGaH30O8fc3Inn"
+            />
             <!--  <SocialMediaItem socialmedia="Facebook" icon="fa-facebook" /> -->
-            <Tiktok />
-            <SocialMediaItem socialmedia="WhatsApp" icon="fa-whatsapp" />
+            <Tiktok href="https://www.tiktok.com/@ignaciomarinimk" />
+            <SocialMediaItem
+                socialmedia="WhatsApp"
+                icon="fa-whatsapp"
+                href="https://wa.me/+61431273526"
+            />
         </div>
     </div>
     <div class="mt-10"></div>
