@@ -1,12 +1,11 @@
 ---
 import Dialog from "./Dialog.astro";
-
-const { id, buttonText, modalTitle, modalText } = Astro.props;
 ---
 
 <button class="btn open-button2">Información</button>
 <dialog class="modal2 bg-custom" id="modal2">
     <Dialog
+        key={1}
         titleWhite={"Bussy"}
         src="assets/img/mentory/1.png"
         titleRed={"Moms"}

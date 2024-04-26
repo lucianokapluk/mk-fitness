@@ -60,12 +60,16 @@ const { title } = Astro.props;
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<meta name="generator" content={Astro.generator} />
-
+		<script
+			src="https://www.paypal.com/sdk/js?client-id=BAArUHBwyhbMnrVCeQgi_7sUZIqNx84ycqmPVQCuDUMZT0C_JyBFUeoUg71c9Dvw4QrmcxjnCOmcsWXxOg&components=hosted-buttons&disable-funding=venmo&currency=USD"
+			is:inline></script>
 		<title>{title}</title>
 	</head>
+
 	<body id="home">
 		<slot />
 	</body>
+
 	<script src="/assets/js/jquery-2.2.4.min.js" is:inline></script>
 	<script src="/assets/js/slick.min.js" is:inline></script>
 	<script src="assets/js/isotope.pkgd.js" is:inline></script>
@@ -73,33 +77,3 @@ const { title } = Astro.props;
 	<script src="/assets/js/parallax.min.js" is:inline></script>
 	<script src="/assets/js/scripts.js" is:inline></script>
 </html>
-<!-- <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
- -->

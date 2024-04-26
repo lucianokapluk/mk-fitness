@@ -1,11 +1,14 @@
 ---
 import CloseIcon from "../icons/CloseIcon.astro";
+import BootyWorkoutBtn from "./buttons/BootyWorkoutBtn.astro";
+import BusyMomBtn from "./buttons/BusyMomBtn.astro";
+import MujerFuerteBtn from "./buttons/MujerFuerteBtn.astro";
 
 const { titleWhite, titleRed, text, subTitle, closeButtonClass, src } =
     Astro.props;
 ---
 
-<div class="p-10">
+<div class="p-10 z-0">
     <span class="absolute right-10">
         <button class=`${closeButtonClass} text-cyan-50`><CloseIcon /></button>
     </span>
@@ -29,30 +32,16 @@ const { titleWhite, titleRed, text, subTitle, closeButtonClass, src } =
     <p style="font-size: 18px; font-weight: normal ;" class="max-w-lg">
         {text}
     </p>
-    <div id="paypal-container-NVJGAMNUP6GBY"></div>
-    <button class=`btn ${titleWhite}`>
-        <span>Lo Quiero! </span>
-    </button>
+
+    {
+        titleWhite == "Bussy" ? (
+            <BusyMomBtn key="1" />
+        ) : titleWhite == "Booty" ? (
+            <BootyWorkoutBtn key="2" />
+        ) : titleWhite == "Mujer" ? (
+            <MujerFuerteBtn key="3" />
+        ) : (
+            <h1>s</h1>
+        )
+    }
 </div>
-<script>
-    import { loadScript } from "@paypal/paypal-js";
-
-    let paypal;
-
-    try {
-        paypal = await loadScript({
-            clientId:
-                "BAArUHBwyhbMnrVCeQgi_7sUZIqNx84ycqmPVQCuDUMZT0C_JyBFUeoUg71c9Dvw4QrmcxjnCOmcsWXxOg",
-        });
-    } catch (error) {
-        console.error("failed to load the PayPal JS SDK script", error);
-    }
-
-    if (paypal) {
-        try {
-            await paypal.Buttons().render("#paypal-container-NVJGAMNUP6GBY");
-        } catch (error) {
-            console.error("failed to render the PayPal Buttons", error);
-        }
-    }
-</script>

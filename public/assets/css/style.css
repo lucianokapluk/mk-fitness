@@ -224,6 +224,56 @@ body.page-loaded.no-scroll {
   position: relative;
 }
 
+
+/* PAYPAL */
+/* bussy #paypal-container-ZXHC34NZY2DG6*/
+#paypal-form-fields-container-ZXHC34NZY2DG6>label {
+  display: none !important;
+}
+
+#paypal-form-fields-container-ZXHC34NZY2DG6>p {
+  display: none !important;
+}
+
+#paypal-form-fields-container-ZXHC34NZY2DG6>select {
+  display: none !important;
+}
+
+/* booty #paypal-container-H4KLLZVR97FRQ */
+#paypal-form-fields-container-H4KLLZVR97FRQ>label {
+  display: none !important;
+}
+
+#paypal-form-fields-container-H4KLLZVR97FRQ>p {
+  display: none !important;
+}
+
+#paypal-form-fields-container-H4KLLZVR97FRQ>select {
+  display: none !important;
+}
+
+/* mujer #paypal-container-NVJGAMNUP6GBY */
+#paypal-form-fields-container-NVJGAMNUP6GBY>label {
+  display: none !important;
+}
+
+#paypal-form-fields-container-NVJGAMNUP6GBY>p {
+  display: none !important;
+}
+
+#paypal-form-fields-container-NVJGAMNUP6GBY>select {
+  display: none !important;
+}
+
+.mercadopago-button {
+  width: 100% !important;
+  height: 55px !important;
+  font-size: 22px !important;
+}
+
+
+/* PAYPAL */
+
 img {
   max-width: 100%;
 }

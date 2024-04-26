@@ -1,0 +1,16 @@
+<script
+    src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+    data-preference-id="214896082-daa14741-81f6-4380-8d1e-2408c6a9e48a"
+    data-source="button"></script>
+
+<div id="paypal-container-H4KLLZVR97FRQ"></div>
+
+<script is:inline>
+    paypal
+        .HostedButtons({
+            hostedButtonId: "H4KLLZVR97FRQ",
+        })
+        .render("#paypal-container-H4KLLZVR97FRQ");
+    var boton = document.querySelector(".mercadopago-button");
+    boton.innerHTML = "Mercado Pago";
+</script>
