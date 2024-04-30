@@ -1,11 +1,18 @@
 ---
+import MercadoLibre from "../../../public/assets/img/social-media/MercadoLibre.astro";
+import PayPal from "../../../public/assets/img/social-media/PayPal.astro";
 import CloseIcon from "../icons/CloseIcon.astro";
-import BootyWorkoutBtn from "./buttons/BootyWorkoutBtn.astro";
-import BusyMomBtn from "./buttons/BusyMomBtn.astro";
-import MujerFuerteBtn from "./buttons/MujerFuerteBtn.astro";
 
-const { titleWhite, titleRed, text, subTitle, closeButtonClass, src } =
-    Astro.props;
+const {
+    titleWhite,
+    titleRed,
+    text,
+    subTitle,
+    closeButtonClass,
+    src,
+    hrefMp,
+    hrefPayPal,
+} = Astro.props;
 ---
 
 <div class="p-10 z-0">
@@ -30,18 +37,67 @@ const { titleWhite, titleRed, text, subTitle, closeButtonClass, src } =
         {subTitle}
     </h1>
     <p style="font-size: 18px; font-weight: normal ;" class="max-w-lg">
-        {text}
+        {
+            titleWhite == "Asesoramiento" ? (
+                <p
+                    style="font-size: 18px; font-weight: normal ;"
+                    class="max-w-lg"
+                >
+                    Obtendrás tu rutina personalizada de acorde a tus objetivos
+                    y nivel, tu plan de nutrición, con tus macronutrientes y
+                    calorías. <br />
+                    Tendrás videollamadas quincenales conmigo en la cual
+                    hablaremos de tu semana, de tus dudas y lo que sea
+                    necesario. <br />
+                    Tendrás clases semanales sobre mindset, hábitos, nutrición,
+                    entrenamiento, guías exclusivas y mucho más!
+                    <br />
+                    Tiene una duración de 3 meses/ 90 días en la cual
+                    necesitarás estar al mil porciento.
+                    <br />
+                    Completa el formulario haciendo click en el siguiente enlace
+                    (enlace) y agenda tu llamada conmigo para contarte más!
+                </p>
+            ) : (
+                text
+            )
+        }
     </p>
 
     {
-        titleWhite == "Bussy" ? (
-            <BusyMomBtn key="1" />
-        ) : titleWhite == "Booty" ? (
-            <BootyWorkoutBtn key="2" />
-        ) : titleWhite == "Mujer" ? (
-            <MujerFuerteBtn key="3" />
+        titleWhite == "Asesoramiento" ? (
+            <a
+                href="https://calendly.com/mkonlinefitness/asesoramiento1a1"
+                target="_blank"
+                class="bg-white font-bold py-2 px-4 rounded inline-flex items-center"
+            >
+                <img
+                    width="150"
+                    height="51"
+                    src="assets/img/social-media/CalendlyIcon.png"
+                />
+            </a>
         ) : (
-            <h1>s</h1>
+            <>
+                <a
+                    href={hrefMp}
+                    target="_blank"
+                    class="bg-mp/85 hover:bg-mp font-bold py-2 px-4 rounded inline-flex items-center"
+                >
+                    <span class="pr-2">
+                        <MercadoLibre />
+                    </span>
+                    <span class="text-white"> Mercado Pago </span>
+                </a>
+                <a
+                    href={hrefPayPal}
+                    target="_blank"
+                    class="bg-paypal/85 hover:bg-paypal text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+                >
+                    <PayPal />
+                    <span class="text-black"> PayPal </span>
+                </a>
+            </>
         )
     }
 </div>

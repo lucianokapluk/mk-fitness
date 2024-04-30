@@ -4,13 +4,15 @@ import Dialog from "./Dialog.astro";
 const { id, buttonText, modalTitle, modalText } = Astro.props;
 ---
 
-<button class="btn open-button1">Información</button>
-<dialog class="modal1 bg-custom" id="modal1">
+<button class="btn open-button1 z-0">Información</button>
+<dialog class="modal1 bg-custom z-0" id="modal1">
     <Dialog
         key={2}
         src="assets/img/mentory/2.png"
         titleWhite="Booty"
         titleRed="Workout"
+        hrefMp="https://mpago.la/1wPhGYa"
+        hrefPayPal="https://www.paypal.com/ncp/payment/H4KLLZVR97FRQ"
         subTitle="Que obtengo con el plan Booty Workout? "
         closeButtonClass="close-button1"
         text=`Vas a tener una rutina personalizada,para hacer en tu gym favorito, según tu nivel de entrenamiento/tiempo/prioridades enfocada mayormente en el desarrollo del glúteo y con soporte por Ignacio.`

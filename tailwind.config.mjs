@@ -5,6 +5,8 @@ export default {
 		extend: {
 			colors: {
 				'custom': '#272a31',
+				'mp': '#009EE3',
+				'paypal': '#FFC439'
 			},
 		},
 	},

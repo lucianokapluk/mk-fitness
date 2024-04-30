@@ -3,9 +3,10 @@ import Dialog from "./Dialog.astro";
 ---
 
 <button class="btn open-button2">Información</button>
-<dialog class="modal2 bg-custom" id="modal2">
+<dialog class="modal2 bg-custom z-0" id="modal2">
     <Dialog
         key={1}
+        hrefMp={"https://mpago.la/2q4efJn"}
         titleWhite={"Bussy"}
         src="assets/img/mentory/1.png"
         titleRed={"Moms"}
@@ -18,7 +19,7 @@ import Dialog from "./Dialog.astro";
     const modal = document.querySelector(".modal2") as any;
     const openModal = document.querySelector(".open-button2");
     const closeModal = document.querySelector(".close-button2");
-
+    modal.style.zIndex = "0";
     openModal.addEventListener("click", () => {
         modal.showModal();
     });
