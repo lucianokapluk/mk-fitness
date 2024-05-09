@@ -12,6 +12,7 @@ const {
     src,
     hrefMp,
     hrefPayPal,
+    duration,
 } = Astro.props;
 ---
 
@@ -33,10 +34,13 @@ const {
     <h2 class="title-decor text-cyan-50">
         {titleWhite}<span> {titleRed}</span>
     </h2>
-    <h1 class="text-cyan-50" style="font-size: 22px;">
+    <h1 class="text-cyan-50" style="font-size: 22px; padding:0px">
         {subTitle}
     </h1>
-    <p style="font-size: 18px; font-weight: normal ;" class="max-w-lg">
+    <p
+        style="font-size: 18px; font-weight: normal ;padding:0px"
+        class="max-w-lg"
+    >
         {
             titleWhite == "Asesoramiento" ? (
                 <p
@@ -63,6 +67,15 @@ const {
             )
         }
     </p>
+    <div class="p-2">
+        {
+            titleWhite == "Asesoramiento" || titleWhite == "Mujer" ? (
+                <span class="text-gray-400">Duracion 3 Mes (Un solo pago)</span>
+            ) : (
+                <span class="text-gray-400">Duracion 1 Mes</span>
+            )
+        }
+    </div>
 
     {
         titleWhite == "Asesoramiento" ? (
